@@ -2,6 +2,7 @@ package main
 
 import (
 	"avito_internship_backend/config"
+	"avito_internship_backend/internal/app"
 	"fmt"
 )
 
@@ -10,6 +11,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(cfg.Port)
-	// TODO: initialize config and logger - then continue in internal/app/app.go
+
+	app.Run(cfg)
+	// TODO: initialize ogger - then continue in internal/app/app.go
 }
