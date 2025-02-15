@@ -2,6 +2,7 @@ package main
 
 import (
 	"avito_internship_backend/config"
+	_ "avito_internship_backend/docs"
 	"avito_internship_backend/internal/app"
 	"fmt"
 )

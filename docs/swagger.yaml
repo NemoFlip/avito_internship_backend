@@ -1,0 +1,8 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: This is backend for the avito's microservise task
+  title: Avito Internship Backend
+paths: {}
+swagger: "2.0"
