@@ -4,18 +4,16 @@ import (
 	"avito_internship_backend/config"
 	_ "avito_internship_backend/docs"
 	"avito_internship_backend/internal/app"
-	"avito_internship_backend/pkg/logger"
-	"fmt"
+	"avito_internship_backend/pkg/logging"
 )
 
 func main() {
-	logging := logger.InitLogger()
+	logger := logging.InitLogger()
 	cfg, err := config.NewConfig()
 	if err != nil {
-		fmt.Println(err)
+		logger.ErrorLogger.Fatal(err)
 	}
-	logging.InfoLogger.Info("Cfg initialized")
+	logger.InfoLogger.Info("Config was initialized")
 
-	app.Run(cfg)
-	// TODO: initialize ogger - then continue in internal/app/app.go
+	app.Run(logger, cfg)
 }
